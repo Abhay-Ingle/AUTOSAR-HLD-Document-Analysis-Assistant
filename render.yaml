@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: autosar-hld-assistant
+    runtime: python
+    plan: free
+    buildCommand: pip install -e "."
+    startCommand: uvicorn combined:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./data/autosar.db
+      - key: APP_DATA_DIR
+        value: ./data
+      - key: OLLAMA_BASE_URL
+        value: http://localhost:11434
+      - key: PYTHON_VERSION
+        value: "3.11"

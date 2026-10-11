@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: autosar-hld-assistant
+Version: 0.1.0
+Summary: Secure, local AUTOSAR HLD document analysis assistant
+Requires-Python: >=3.11
+Requires-Dist: fastapi<1,>=0.115
+Requires-Dist: uvicorn[standard]<1,>=0.30
+Requires-Dist: pydantic<3,>=2.8
+Requires-Dist: pydantic-settings<3,>=2.4
+Requires-Dist: sqlalchemy<3,>=2.0
+Requires-Dist: alembic<2,>=1.13
+Requires-Dist: httpx<1,>=0.27
+Provides-Extra: dev
+Requires-Dist: pytest<9,>=8.3; extra == "dev"
+Requires-Dist: pytest-cov<6,>=5; extra == "dev"
+Requires-Dist: ruff<1,>=0.6; extra == "dev"
+Requires-Dist: mypy<2,>=1.11; extra == "dev"
+Provides-Extra: vector
+Requires-Dist: chromadb<1,>=0.5; extra == "vector"
+Requires-Dist: sentence-transformers<4,>=3; extra == "vector"
+Provides-Extra: ui
+Requires-Dist: streamlit<2,>=1.38; extra == "ui"
